@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FriendContext } from '../context/FriendProvider';
+import CallFriend from '../timelineMessage/CallFriend';
+import MessageFriend from '../timelineMessage/MessageFriend';
+import VideoCallFriend from '../timelineMessage/VideoCallFriend';
 
 const TimeLinePage = () => {
+         const {callFriend, setCallFriend, messageFriend, setMessageFriend, videoCallFriend, setVideoCallFriend} = useContext(FriendContext);
+
+
+
     return (
-        <div>
-            TimeLine
+        <div className='bg-gray-100'>
+           <div className='container mx-auto py-20'>
+                <h1 className='text-5xl font-bold mb-10'>TimeLine</h1>
+
+           <div className='space-y-5'>
+            <CallFriend callFriend={callFriend}></CallFriend>
+            <MessageFriend messageFriend={messageFriend}></MessageFriend>
+            <VideoCallFriend videoCallFriend={videoCallFriend}></VideoCallFriend>
+            
+           </div>
         </div>
+            </div>
     );
 };
 

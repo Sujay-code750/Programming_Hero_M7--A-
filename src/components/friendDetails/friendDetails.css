@@ -1,0 +1,31 @@
+.customGrid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "friendDetails friendDetails days_since_contact goal next_due_date"
+    "friendDetails friendDetails Relationship_Goal Relationship_Goal Relationship_Goal"
+    "buttons buttons Quick_check Quick_check Quick_check"
+    ;
+}
+.friendDetails{
+    grid-area: friendDetails;
+}
+.days_since_contact{
+    grid-area: days_since_contact;
+}
+.goal{
+    grid-area: goal;
+}
+.next_due_date{
+    grid-area: next_due_date;
+}
+.Relationship_Goal{
+    grid-area: Relationship_Goal;
+}
+.buttons{
+    grid-area: buttons;
+}
+.Quick_check{
+    grid-area: Quick_check;
+}
